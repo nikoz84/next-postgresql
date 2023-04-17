@@ -19,10 +19,19 @@
         "name": "next"
       }
     ],
+    "types": [
+      "@types/node",
+      "@types/react"
+    ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@pages/*": ["pages/*"],
+      "@app/*": ["app/*"],
+      "@components/*": ["app/components/*"],
+      "@prisma/*": ["prisma/*"],
+      "@styles/*": ["styles/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.jsx", "app/layout.jsx", "pages/404.js", "pages/404.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/posts/validators/*", ".next/types/**/*.ts", "app/layout.jsx", "app/layout.jsx", "pages/404.js", "pages/404.js"],
   "exclude": ["node_modules"]
 }
